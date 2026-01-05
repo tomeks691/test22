@@ -1,0 +1,29 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="fastapi" />
+          <option value="uvicorn" />
+          <option value="psycopg2-binary" />
+          <option value="apscheduler" />
+          <option value="pydantic" />
+          <option value="pydantic-settings" />
+          <option value="python-dotenv" />
+          <option value="pyodbc" />
+          <option value="pymssql" />
+          <option value="tenacity" />
+          <option value="requests" />
+          <option value="schedule" />
+          <option value="woocommerce" />
+          <option value="smtplib2" />
+          <option value="keyring" />
+          <option value="pillow" />
+          <option value="platformdirs" />
+          <option value="google-cloud-bigquery" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
