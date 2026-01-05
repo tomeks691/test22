@@ -4,7 +4,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 
 
-app = FastAPI(title="Test22 API", version="0.1.0")
+app = FastAPI(title="Test22 API", version="0.1.1")
 
 
 class ItemIn(BaseModel):
@@ -23,12 +23,18 @@ _id_seq: int = 0
 
 @app.get("/status")
 def status() -> dict:
-    return {"status": "ok", "service": app.title, "version": app.version}
+    return {
+        "status": "ok",
+        "service": app.title,
+        "version": app.version,
+        "items_count": len(db),
+    }
 
 
 @app.post("/echo")
 def echo(payload: dict) -> dict:
-    return {"echo": payload}
+    # Include a simple metadata field to help with debugging
+    return {"echo": payload, "received": True}
 
 
 @app.post("/items", response_model=Item, status_code=201)
